@@ -24,9 +24,9 @@ func fly(myPlane : Aviatrix) {
     print("Where would you like to fly to? ")
     print(" ")
     let destinations = myPlane.knownDestinations()
-    
     for (index, city) in destinations.enumerated() {
-        let distance = myPlane.distanceTo(target: city)
+        let distance =
+        myPlane.distanceTo(target: city)
         print("\(index): \(city), \(distance) miles")
     }
     
@@ -74,12 +74,12 @@ func fuelCheck(myPlane : Aviatrix, destination : String) -> Bool {
     return true
 }
 
-var plane = Aviatrix()
-
-print("Welcome to the Aviatrix Flight System by _________")
+var plane = Aviatrix(authorName: "Genesis")
+plane.author = ("genesis")
+print("Welcome to the Aviatrix Flight System by (\(plane.author)")
 plane.start()
 
-print("You're currently in _________")
+print("You're currently in \(plane.author)")
 
 var command = ""
 
@@ -109,4 +109,4 @@ while command != "q" {
 }
 
 print(" ")
-print("Thanks for flying with _________ airline!")
+print("Thanks for flying with \(plane.author)airline!")
